@@ -2,10 +2,17 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = {
-  entry: './src/index.ts',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'main.js'
+  },
+
+  target: 'web',
+  devtool:'source-map',
+
+  devServer: {
+    contentBase: './dist',
   },
   module: {
     rules: [
