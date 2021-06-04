@@ -4,10 +4,11 @@
   "description": "Lets-To-Do is a web application builted with web technologies. Looking to give a daily tool, where you can create Projects, and many lists for your daily pending tasks.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack -p",
-    "dev": "webpack-dev-server -d",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
   },
   "repository": {
     "type": "git",
